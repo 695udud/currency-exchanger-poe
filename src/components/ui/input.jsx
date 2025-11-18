@@ -1,8 +1,11 @@
-export default function Input(props) {
+export default function Input({ label, ...props }) {
   return (
-    <input
-      {...props}
-      style={{ padding: "6px 10px", margin: "6px 0", width: "100%", borderRadius: 6, border: "1px solid #aaa" }}
-    />
+    <div className="flex flex-col">
+      {label && <label className="text-sm mb-1">{label}</label>}
+      <input
+        {...props}
+        className="border rounded-lg px-3 py-2 w-full"
+      />
+    </div>
   );
 }
