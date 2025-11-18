@@ -1,7 +1,5 @@
-export default function Card({ children }) {
+export default function Card({ children, className = "" }) {
   return (
-    <div style={{ padding: 20, margin: "16px 0", border: "1px solid #ccc", borderRadius: 10 }}>
-      {children}
-    </div>
+    <div className={`p-4 bg-white rounded-xl shadow ${className}`}>{children}</div>
   );
 }
